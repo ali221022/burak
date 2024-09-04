@@ -8,6 +8,7 @@ MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
 @MITASK'
 */
 
+/*
 function getHighestIndex(numbers: number[]): number {
     let max: number = numbers[0];  // `max`ni birinchi element bilan boshlaymiz
     let maxIndex: number = 0;      // `maxIndex`ni 0 deb boshlaymiz
@@ -25,3 +26,18 @@ function getHighestIndex(numbers: number[]): number {
 // Misol:
 const result = getHighestIndex([90, 71, 92, 45, 88]);
 console.log(result); // 1 chiqadi, chunki 21 ning birinchi indeksi 2 ga teng
+
+*/
+
+/*
+H-TASK: 
+
+shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+
+*/
+
+function getPositive(numbers: number[]): number {
+    if (number > 0) 
+
+}
