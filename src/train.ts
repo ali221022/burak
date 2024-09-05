@@ -37,7 +37,13 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
 */
 
-function getPositive(numbers: number[]): number {
-    if (number > 0) 
-
+function getPositive(arr: number[]): string {
+    // Faqat positive qiymatlarni tanlab, ularni stringga aylantiramiz
+    const positiveNumbers = arr.filter(num => num > 0).map(num => num.toString());
+    // Ro'yxatdagi elementlarni birlashtirib, bitta string qilib qaytaramiz
+    return positiveNumbers.join('');
 }
+
+// Misol uchun:
+const result = getPositive([34, -47, 827]);
+console.log(result);  // Bu yerda natija "34827" bo'ladi
