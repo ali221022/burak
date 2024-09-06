@@ -25,7 +25,7 @@ function getHighestIndex(numbers: number[]): number {
 
 // Misol:
 const result = getHighestIndex([90, 71, 92, 45, 88]);
-console.log(result); // 1 chiqadi, chunki 21 ning birinchi indeksi 2 ga teng
+console.log(result); // 2 chiqadi, chunki 92 ning birinchi indeksi 2 ga teng
 
 */
 
