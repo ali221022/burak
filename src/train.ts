@@ -37,6 +37,7 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
 */
 
+/*
 function getPositive(arr: number[]): string {
     // Faqat positive qiymatlarni tanlab, ularni stringga aylantiramiz
     const positiveNumbers = arr.filter(num => num > 0).map(num => num.toString());
@@ -47,3 +48,29 @@ function getPositive(arr: number[]): string {
 // Misol uchun:
 const result = getPositive([34, -47, 827]);
 console.log(result);  // Bu yerda natija "34827" bo'ladi
+*/
+
+/*
+H2-TASK: 
+
+Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
+MASALAN: getDigits("m14i1t") return qiladi "141"
+
+@steezyworld MITASK
+*/
+
+
+
+function getDigits(input: string): string {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+        const map = input[i];
+        if (!isNaN(parseInt(map))) {  // Agar `map` raqam bo'lsa
+            result += map;            // Uni natijaga qo'shamiz
+        }
+    }
+    return result;
+}
+
+// Misol:
+console.log(getDigits("m14i1t")); // "141" ni qaytaradi
