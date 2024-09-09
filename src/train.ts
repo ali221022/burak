@@ -3,7 +3,7 @@
 - Naming standarts
     fuction, method, variable => CAMEL   goHome
     class => PASKAL                      MemberServise
-    folder => KEBAB                      Folder-nome
+    folder, file => KEBAB                      Folder-nome
     css => SNAKE                         button_style
 
 - Eror handling    
