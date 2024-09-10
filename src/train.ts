@@ -9,6 +9,14 @@
 - Eror handling    
 
 */
+
+
+/***
+   Traditional API
+   Rest API
+   GraphQL API
+   ...
+ */
 // console.log("Hello World");
 /*
 G.TASK: 
