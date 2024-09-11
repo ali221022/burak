@@ -6,7 +6,7 @@
     folder, file => KEBAB                      Folder-nome
     css => SNAKE                         button_style
 
-- Eror handling    
+- Error handling    
 
 */
 
