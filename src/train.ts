@@ -17,6 +17,11 @@
    GraphQL API
    ...
  */
+
+   /**
+    Traditional FD => BSSR (Admin)  => EJS
+    Modern FD   => SPA (User's aplication) => REACT  
+    */
 // console.log("Hello World");
 /*
 G.TASK: 
