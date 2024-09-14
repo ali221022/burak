@@ -84,7 +84,7 @@ MASALAN: getDigits("m14i1t") return qiladi "141"
 */
 
 
-
+/*
 function getDigits(input: string): string {
     let result = '';
     for (let i = 0; i < input.length; i++) {
@@ -98,3 +98,35 @@ function getDigits(input: string): string {
 
 // Misol:
 console.log(getDigits("m14i1t")); // "141" ni qaytaradi
+*/
+
+
+/***
+ * TASK J:
+
+Shunday function tuzing, u string qabul qilsin.
+Va string ichidagi eng uzun so'zni qaytarsin.
+
+MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+
+Yuqoridagi text tarkibida 'Uzbekistan'
+eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
+ */
+
+
+function findLongestWord(input: string): string{
+    const words =  input.split(" ");
+
+    let longestWord = "";
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i];
+        }
+    }
+
+    return longestWord;
+};
+
+const result = findLongestWord("I came from Uzbekistan!")
+console.log(result);
