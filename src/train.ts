@@ -114,8 +114,8 @@ eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
  */
 
 
-function findLongestWord(input: string): string{
-    const words =  input.split(" ");
+function findLongestWord(word: string): string{
+    const words =  word.split(" ");
 
     let longestWord = "";
 
