@@ -5,6 +5,9 @@ import { MemberType } from "../libs/enums/member.enum";
 import * as bcrypt from "bcryptjs";
 
 class MemberService {
+    logOut(newMember: MemberInput) {
+      throw new Error("Method not implemented.");
+    }
     private readonly memberModel;
     
     constructor() {

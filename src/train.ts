@@ -22,6 +22,13 @@
     Traditional FD => BSSR (Admin)  => EJS
     Modern FD   => SPA (User's aplication) => REACT  
     */
+/**
+   request join
+   self destroy
+
+ */
+
+
 // console.log("Hello World");
 /*
 G.TASK: 
