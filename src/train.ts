@@ -120,7 +120,7 @@ Yuqoridagi text tarkibida 'Uzbekistan'
 eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
  */
 
-
+/*
 function findLongestWord(word: string): string{
     const words =  word.split(" ");
 
@@ -137,3 +137,33 @@ function findLongestWord(word: string): string{
 
 const result = findLongestWord("I came from Uzbekistan!")
 console.log(result);
+*/
+
+/***
+ TASK K:
+
+Berilayotgan parametr tarkibida nechta unli harf bor
+ekanligini aniqlovchi function tuzing
+
+MASALAN: countVowels("string"); return 1
+
+Yuqoridagi misolda 'string' so'zi tarkibida yagona unli harf 'i'
+bo'lganligi uchun '1'ni qaytarmoqda
+ */
+
+function countVowels(words: string): number {
+    // Unli harflarni aniqlash uchun qabul qilinadigan harflar ro'yxati
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let count = 0; 
+
+    for (let char of words) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// Misol
+console.log(countVowels("string")); // 1
