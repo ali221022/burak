@@ -14,20 +14,29 @@ routerAdmin
 .get('/signup', restaurantController.getSignup)
 .post('/signup', restaurantController.processSignup);
 
-routerAdmin
-.get('/logout', restaurantController.logOut);
+routerAdmin.get('/logout', restaurantController.logOut);
 
-routerAdmin
-.get('/check-me', restaurantController.checkAuthSession);
+routerAdmin.get('/check-me', restaurantController.checkAuthSession);
 
 
 
 /** Product */
 
-routerAdmin
-.get('/product/all', productController.getAllProducts)
-.post('/product/create', productController.createNewProduct)
-.post('/product/:id', productController.updateChosenProduct);
+routerAdmin.get(
+    '/product/all', 
+    restaurantController.verifyRestaurant, 
+    productController.getAllProducts
+);
+routerAdmin.post(
+    '/product/create', 
+    restaurantController.verifyRestaurant,
+    productController.createNewProduct
+);
+routerAdmin.post(
+    '/product/:id', 
+    restaurantController.verifyRestaurant, 
+    productController.updateChosenProduct
+);
 
 
 /** User */

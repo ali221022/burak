@@ -3,13 +3,14 @@ import Errors from "../libs/types/Errors";
 import { T } from "../libs/types/common";
 import ProductService from "../models/Product.service";
 
+
 const productService = new ProductService;
 const productController: T = {};
 
 productController.getAllProducts = async (req: Request, res: Response) => {
     try {
       console.log("getAllProducts");
-      res.render("products")
+      res.render("products");
     } catch (err) {
       console.log("ERROR, getAllProducts:", err);
       if (err instanceof Errors) res.status(err.code).json(err);
