@@ -91,9 +91,6 @@ class MemberService {
     }
 
     return await this.memberModel.findById(member._id).exec();
-    
-    
-
     }
 }
 
