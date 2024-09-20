@@ -18,15 +18,30 @@
    ...
  */
 
-   /**
+   /** Frontend Development:
     Traditional FD => BSSR (Admin)  => EJS
     Modern FD   => SPA (User's aplication) => REACT  
     */
+
+
 /**
+  Cookies:
+  
    request join
    self destroy
 
  */
+
+   /**
+    
+   Validation:
+
+   Frontend validation
+   Pipe validation
+   Backend validation
+   Database validation
+
+    */
 
 
 // console.log("Hello World");
@@ -151,6 +166,7 @@ Yuqoridagi misolda 'string' so'zi tarkibida yagona unli harf 'i'
 bo'lganligi uchun '1'ni qaytarmoqda
  */
 
+/** 
 function countVowels(words: string): number {
     // Unli harflarni aniqlash uchun qabul qilinadigan harflar ro'yxati
     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
@@ -167,3 +183,23 @@ function countVowels(words: string): number {
 
 // Misol
 console.log(countVowels("string")); // 1
+*/
+
+/***
+ TASK L:
+
+So'zlarni ketma - ketligini buzmasdan har bir so'zni
+alohida teskarisiga o'girib beradigan fucntion tuzing.
+Funtion yagona string qabul qilsin
+
+MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc";
+Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida teskarisiga o'girilmoqda
+ */
+
+function reverseSentence(words: string): string {
+    return words.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+
+}
+
+console.log(reverseSentence("Shohjahon Juraev Mekhrojidin Ugli"!));
+
