@@ -13,7 +13,11 @@ routerAdmin
 
 routerAdmin
 .get('/signup', restaurantController.getSignup)
-.post('/signup', makeUploader('members').single('memberImage'), restaurantController.processSignup);
+.post(
+    '/signup',
+     makeUploader('members').single('memberImage'), 
+     restaurantController.processSignup
+    );
 
 routerAdmin.get('/logout', restaurantController.logOut);
 

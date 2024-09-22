@@ -3,7 +3,8 @@ import { MemberStatus, MemberType } from "../libs/enums/member.enum";
 
 // 
 
-const memberSchema = new Schema({
+const memberSchema = new Schema(
+    {
     meberType: {
         type: String,
         enum: MemberType,
