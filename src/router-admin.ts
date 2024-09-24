@@ -5,42 +5,42 @@ import productController from "./controllers/product.controller";
 import  makeUploader  from "./libs/utils/uploader";
 
 /** Restaurant */
-routerAdmin.get('/', restaurantController.goHome);
+routerAdmin.get("/", restaurantController.goHome);
 
 routerAdmin
-.get('/login', restaurantController.getLogin)
-.post('/login', restaurantController.processLogin);
+.get("/login", restaurantController.getLogin)
+.post("/login", restaurantController.processLogin);
 
 routerAdmin
-.get('/signup', restaurantController.getSignup)
+.get("/signup", restaurantController.getSignup)
 .post(
-    '/signup',
-     makeUploader('members').single('memberImage'), 
+    "/signup",
+     makeUploader("members").single("memberImage"), 
      restaurantController.processSignup
     );
 
-routerAdmin.get('/logout', restaurantController.logOut);
+routerAdmin.get("/logout", restaurantController.logOut);
 
-routerAdmin.get('/check-me', restaurantController.checkAuthSession);
+routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 
 
 
 /** Product */
 
 routerAdmin.get(
-    '/product/all', 
+    "/product/all", 
     restaurantController.verifyRestaurant, 
     productController.getAllProducts
 );
 routerAdmin.post(
-    '/product/create', 
+    "/product/create", 
     restaurantController.verifyRestaurant,
   //  uploadProductImage.single('productImage'),
-    makeUploader('products').array('productImages', 5),
+    makeUploader("products").array("productImages", 5),
     productController.createNewProduct
 );
 routerAdmin.post(
-    '/product/:id', 
+    "/product/:id", 
     restaurantController.verifyRestaurant, 
     productController.updateChosenProduct
 );
