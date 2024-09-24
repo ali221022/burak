@@ -20,6 +20,7 @@ export interface Product {
 }
 
 export interface ProductInput {
+  productImages: string[];
   productStatus?: ProductStatus;
   productCollection: ProductCollection;
   productName: string;
