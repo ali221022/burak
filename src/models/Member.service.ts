@@ -6,9 +6,6 @@ import * as bcrypt from "bcryptjs";
 import { shapeIntoMongooseObjectId } from "../libs/utils/config";
 
 class MemberService {
-  // logOut(newMember: MemberInput) {
-  //   throw new Error("Method not implemented.");
-  //  }
   private readonly memberModel;
 
   constructor() {

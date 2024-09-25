@@ -214,7 +214,7 @@ tashkil topgan object hosil qilib, hosil bo'lgan objectlarni array ichida qaytar
 
 MASALAN: MASALAN: getSquareNumbers([1, 2, 3]) return [{ number: 1, square: 1 }, { number: 2, square: 4 }, { number: 3, square: 9 }];
  */
-
+/*
 const getSquareNumbers = (numbers: number[]) =>
     numbers.map(num => ({ number: num, square: num * num }));
   
@@ -222,4 +222,28 @@ const getSquareNumbers = (numbers: number[]) =>
   const result = getSquareNumbers([3, 90, 87]);
 
   console.log(result);
-  
+  */
+
+  /** TASK N:
+
+Parametr sifatida yagona string qabul qiladigan function tuzing.
+Va bu function string'ni palindrom so'z yoki palindrom so'z emasligini aniqlab (boolean)
+'true' yokida 'false' qaytarsin.
+
+MASALAN: palindromCheck("dad") return true; palindromCheck("son") return false;
+Birinchi misolda 'dad' so'zini ikkala tarafdan o'qilganda ham bir xil ma'noni beradi (true)
+Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermaydi (false)
+
+*Palindrom so'z deb o'ngdan chapga ham ~ chapdan o'ngga ham o'qilganda
+bir xil ma'noni beradigan so'zga aytiladi
+ */
+
+
+function palindromCheck(word: string): boolean {
+    
+    return word === word.split('').reverse().join('');
+};
+
+console.log(palindromCheck("dad")); // true
+console.log(palindromCheck("son")); // false
+
