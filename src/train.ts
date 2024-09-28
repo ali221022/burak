@@ -238,7 +238,7 @@ Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermay
 bir xil ma'noni beradigan so'zga aytiladi
  */
 
-
+/** 
 function palindromCheck(word: string): boolean {
     
     return word === word.split('').reverse().join('');
@@ -246,4 +246,33 @@ function palindromCheck(word: string): boolean {
 
 console.log(palindromCheck("dad")); // true
 console.log(palindromCheck("son")); // false
+*/
 
+/**
+ * 
+ * @param book TASK O:
+
+Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
+Va array ichidagi sonlar yig'indisini hisoblab chiqgan javobni qaytarsin
+
+MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
+
+Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 hamda 35
+Qolganlari nested bo'lib yoki type'lari number emas.
+ * @returns 
+ */ 
+
+
+ 
+function calculateSumOfNumbers(book: any[]) { 
+    let sum: number = 0; 
+    for (let i: any = 0; i < book.length; i++){ 
+        if (typeof book[i] === 'number'){ 
+            sum += book[i]; 
+        }  
+    }; 
+    console.log(sum); 
+    return sum; 
+}; 
+ 
+calculateSumOfNumbers([12, "sss", 22]);
