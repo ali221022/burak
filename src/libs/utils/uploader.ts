@@ -15,7 +15,7 @@ function getTargetImageStorage(address: any) {
             cb(null, random_name);
         },
     });
-};
+}
 
 const makeUploader = (address: string) => {
     const storage = getTargetImageStorage(address);

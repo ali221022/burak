@@ -7,10 +7,10 @@ $(function() {
     fileTarget.on("change", function () {
         if(window.FileReader) {
             const uploadFile = $(this)[0].files[0];
-            const fileType = uploadFile("type");
+            const fileType = uploadFile["type"];
             const validImageType = ["image/jpg", "image/jpeg", "image/png"];
             if(!validImageType.includes(fileType)) {
-                alert("Please insert only jpeg, jpg and png!")
+                alert("Please insert only jpeg, jpg and png!");
             } else {
                 if (uploadFile) {
                     console.log(URL.createObjectURL(uploadFile));
@@ -18,12 +18,13 @@ $(function() {
                     .attr("src", URL.createObjectURL(uploadFile))
                     .addClass("success");
                 }
-                fileName = $(this)[0].files[0].name;
+                filename = $(this)[0].files[0].name;
             }
             $(this).siblings(".upload-name").val(filename);
         }
     });
-  });
+   });
+
 
   function validateSignupForm() {
     const memberNick = $(".member-nick").val();
@@ -33,11 +34,11 @@ $(function() {
 
     if (
         memberNick === "" ||
-         memberPhone === "" || 
-         memberPassword === "" || 
-         confirmPassword === "" 
+        memberPhone === "" || 
+        memberPassword === "" || 
+        confirmPassword === "" 
     )  {
-        alert("Please insert all required unputs");
+        alert("Please insert all required inputs!");
         return false;
     }
 
