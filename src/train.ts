@@ -262,7 +262,7 @@ Qolganlari nested bo'lib yoki type'lari number emas.
  * @returns 
  */ 
 
-
+/*
  
 function calculateSumOfNumbers(book: any[]) { 
     let sum: number = 0; 
@@ -276,3 +276,21 @@ function calculateSumOfNumbers(book: any[]) {
 }; 
  
 calculateSumOfNumbers([12, "sss", 22]);
+*/
+
+
+/**
+ TASK P:
+
+Parametr sifatida yagona object qabul qiladigan function yozing.
+Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+ */
+
+function objectToArray(obj: object)  {
+    return Object.entries(obj);
+};
+
+const obj = {"a": 10, "b": 20};
+console.log(objectToArray(obj));
