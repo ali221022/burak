@@ -314,10 +314,46 @@ propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.
 
  */
 
+/*
 function hasProperty(obj: object, prop: string) {
         return obj.hasOwnProperty(prop);
 };
 
 console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); // true
 console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));  // false
+*/
 
+/**
+ TASK R
+
+Shunday function yozing, u string parametrga ega bo'lsin.
+Agar argument sifatida berilayotgan string, "1 + 2" bo'lsa,
+string ichidagi sonlarin yig'indisni hisoblab, number holatida qaytarsin
+
+MASALAN: calculate("1 + 3"); return 4;
+1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
+
+ */
+
+function calculate(expression: string): number | string {
+    
+    let parts: string[] = expression.split(' ');
+
+    let num1: number = parseInt(parts[0]);
+    let operator: string = parts[1];
+    let num2: number = parseInt(parts[2]);
+
+    if (operator === "+") {
+        return num1 + num2;
+    } else if (operator === "-") {
+        return num1 - num2;
+    } else if (operator === "*") {
+        return num1 * num2;
+    } else if (operator === "/") {
+        return num1 / num2;
+    } else {
+        return "Noto'g'ri amal kiritildi!";
+    }
+}
+
+console.log(calculate("1 + 3")); 
