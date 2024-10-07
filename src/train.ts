@@ -334,7 +334,7 @@ MASALAN: calculate("1 + 3"); return 4;
 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
 
  */
-
+/*
 function calculate(expression: string): number | string {
     
     let parts: string[] = expression.split(' ');
@@ -357,3 +357,27 @@ function calculate(expression: string): number | string {
 }
 
 console.log(calculate("1 + 3")); 
+*/
+
+/**
+  TASK S
+
+Shunday function tuzing, u numberlardan tashkil topgan array qabul qilsin
+va o'sha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
+
+MASALAN: missingNumber([3, 0, 1]); return 2
+
+Yuqoridagi misolda, berilayotgan sonlar tarkibini tartiblasak
+'2' soni tushib qolgan
+ 
+ */
+
+function missingNumber(array: number[]): number {
+        const n = array.length;
+        const totalSum = (n * (n + 1)) / 2;
+        const arraySum = array.reduce((a, b) => a + b, 0);
+        return totalSum - arraySum; 
+    }
+    
+   // console.log(missingNumber([3, 0, 1]));
+    console.log(missingNumber([0, 1, 4, 8, 7, 6, 2, 3]));

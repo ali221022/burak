@@ -5,7 +5,6 @@ import {
    ProductStatus, 
    ProductCollection 
 } from "../libs/enums/product.enum";
-import { text } from "express";
 
 
 const productSchema = new Schema(
