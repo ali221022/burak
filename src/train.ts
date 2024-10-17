@@ -372,6 +372,7 @@ Yuqoridagi misolda, berilayotgan sonlar tarkibini tartiblasak
  
  */
 
+/*
 function missingNumber(array: number[]): number {
         const n = array.length;
         const totalSum = (n * (n + 1)) / 2;
@@ -381,3 +382,31 @@ function missingNumber(array: number[]): number {
     
    // console.log(missingNumber([3, 0, 1]));
     console.log(missingNumber([0, 1, 4, 8, 7, 6, 2, 3]));
+*/
+
+
+/***
+ TASK W
+
+Shunday function yozing, u o'ziga parametr sifatida
+yagona array va number qabul qilsin. Siz tuzgan function
+arrayni numberda berilgan uzunlikda kesib bo'laklarga
+ajratgan holatida qaytarsin.
+MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+
+Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
+asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti
+
+ */
+
+function chunkArray(array: number[], member: number): number[][]{
+    const result: number[][] = [];
+
+    for(let i = 0; i < array.length; i += member) {
+        result.push(array.slice(i, i + member));
+    }
+    return result;
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 3))
