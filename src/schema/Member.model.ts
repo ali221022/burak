@@ -43,7 +43,7 @@ const memberSchema = new Schema(
         type: String,
     },
 
-    menubarImage: {
+    memberImage: {
         type: String,
     },
 
