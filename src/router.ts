@@ -53,6 +53,12 @@ router.get(
     productController.getProducts
 );
 
+router.get(
+    "/product/:id",
+    memberController.retrieveAuth,
+    productController.getProduct  
+);
+
 /** Order */
 
 export default router;

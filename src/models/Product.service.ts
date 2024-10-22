@@ -4,6 +4,7 @@ import ProductModel from "../schema/Product.model";
 import { shapeIntoMongooseObjectId } from "../libs/utils/config";
 import { ProductStatus } from "../libs/enums/product.enum";
 import { T } from "../libs/types/common";
+import { ObjectId } from "mongoose";
 
 class ProductService {
   private readonly productModel;
@@ -20,7 +21,7 @@ class ProductService {
     if (inquiry.productCollection)
       match.productCollection = inquiry.productCollection;
     if(inquiry.search) {
-      match.productName = { $regex: new RegExp(inquiry.search, "1") };
+      match.productName = { $regex: new RegExp(inquiry.search, "i") };
     }
     const sort: T = 
     inquiry.order === "productPrice"
@@ -37,6 +38,22 @@ class ProductService {
     if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
 
     return result;
+  }
+
+  public async getProduct(memberId: Object | null, id: string): Promise<Product> {
+      const productId = shapeIntoMongooseObjectId(id);
+
+      let result = await this.productModel
+      .findOne({
+        _id: productId, 
+        productStatus: ProductStatus.PROCESS
+      })
+        .exec();
+      if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+    //TODO: if authenticated users => first => view log creation
+
+      return result;
   }
 
   /** SSR */
