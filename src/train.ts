@@ -491,6 +491,7 @@ berilayotgan array tarkibidagi sonlar ichidan faqatgina juft bo'lgan
 sonlarni topib, ularni hisoblab yig'indisini qaytarmoqda.
 */
 
+/*
 function sumEvens(input: number[]) {
     const  sumEvens = input.filter( (num) => num % 2 === 0 )
              .reduce((sum, num) => sum + num, 0);
@@ -499,3 +500,24 @@ function sumEvens(input: number[]) {
 }
 
 console.log(sumEvens([1, 2, 3, 4, 5, 6]));
+*/
+
+
+/*** TASK ZA
+
+Shunday function yozing, u array ichidagi objectlarni
+'age' qiymati bo'yicha sortlab bersin.
+
+MASALAN: sortByAge([{age:23}, {age:21}, {age:13}]) return [{age:13}, {age:21}, {age:23}]
+
+Yuqoridagi misolda, kichik raqamlar katta raqamlar tomon
+tartiblangan holatda return bo'lmoqda.
+ */
+
+interface Person {
+    age: number;
+}
+
+function sortByAge(array: Person[]): Person[] {
+    return array.sort((a, b) => a.age - b.age);
+}
