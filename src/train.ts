@@ -592,7 +592,7 @@ Yuqoridagi misolda, birinchi raqam bu '1' va arrayning '1'chi indeksi bu 3.
 Bizning function uchinchi berilgan '2' raqamini shu '3' bilan almashtirib,
 yangilangan arrayni qaytarmoqda.
  */
-
+/*
 function changeNumberInArray(num: number, arr: number[], num2: number ) {
     let raqamAlishtirish = num;
     
@@ -602,3 +602,19 @@ function changeNumberInArray(num: number, arr: number[], num2: number ) {
     
     return arr;
 }
+    */
+
+/**
+ TASK ZE
+
+Shunday function yozing, uniygona string parametri mavjud bo'lsin.
+Bu function string tarkibidagi takrorlangan xarflarni olib tashlab qolgan
+qiymatni qaytarsin.
+
+MASALAN: removeDuplicate('stringg') return 'string'
+
+Yuqoridagi misolda, 'stringg' so'zi tarkibida 'g' harfi takrorlanmoqda
+funktsiyamiz shu bittadan ortiq takrorlangan harfni olib natijani
+qaytarmoqda.
+
+ */
