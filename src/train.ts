@@ -607,7 +607,7 @@ function changeNumberInArray(num: number, arr: number[], num2: number ) {
 /**
  TASK ZE
 
-Shunday function yozing, uniygona string parametri mavjud bo'lsin.
+Shunday function yozing, uni yagona string parametri mavjud bo'lsin.
 Bu function string tarkibidagi takrorlangan xarflarni olib tashlab qolgan
 qiymatni qaytarsin.
 
@@ -618,3 +618,34 @@ funktsiyamiz shu bittadan ortiq takrorlangan harfni olib natijani
 qaytarmoqda.
 
  */
+
+/*
+function removeDuplicate(word: string) {
+    const natija = new Set(word);
+
+    return Array.from(natija).join('');
+}
+
+
+console.log(removeDuplicate("oliy maqsad sari olg'a!"));
+*/
+
+/**
+ TASK ZG
+
+String sifatida berilgan string parametrni
+snake case'ga o'tkazib beradigan function yozing.
+
+MASALAN: convertToSnakeCase('name should be a string')
+return 'name_should_be_a_string'
+
+ */
+
+function convertToSnakeCase(words: string): string{ 
+    const natija =  words.toLowerCase();
+
+    const snakeCased = natija.replace(/\s+/g, '_');
+    return snakeCased;
+}
+
+console.log(convertToSnakeCase("Abu Rayhon Beruniy"));
