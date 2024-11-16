@@ -641,6 +641,7 @@ return 'name_should_be_a_string'
 
  */
 
+/*
 function convertToSnakeCase(words: string): string{ 
     const natija =  words.toLowerCase();
 
@@ -649,3 +650,33 @@ function convertToSnakeCase(words: string): string{
 }
 
 console.log(convertToSnakeCase("Abu Rayhon Beruniy"));
+*/
+
+/**
+ *TASK ZH
+
+Shunday function yozing, u berilgan array parametri ichidagi
+raqamlar orasidan, tartib bo'yicha eng kichik raqamdan, eng katta raqamgacha
+tushirib qoldirilgan sonlarni o'zinigina topib bir array sifatida qaytarsin.
+  
+MASALAN: findDisappearedNumbers([1, 3, 4, 7]); return [2, 5, 6];
+
+Yuqoridagi misolda, eng katta raqam bu 7 va eng kichik raqam bu 1.
+Function'ning vazifasi berilgan sonlar ichidan tushirib qoldirilgan
+sonlarnigina topib qaytarmoqda.
+ */
+
+function findDisappearedNumbers(arr: number[]): number[] {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+  
+      const fullRange = Array.from({ length: max - min + 1 }, (_, i) => min + i);
+  
+    const missingNumbers = fullRange.filter(num => !arr.includes(num));
+  
+    return missingNumbers;
+  }
+  
+  const result = findDisappearedNumbers([1, 3, 4, 7]);
+  console.log(result); 
+  
