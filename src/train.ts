@@ -666,6 +666,7 @@ Function'ning vazifasi berilgan sonlar ichidan tushirib qoldirilgan
 sonlarnigina topib qaytarmoqda.
  */
 
+/*
 function findDisappearedNumbers(arr: number[]): number[] {
     const min = Math.min(...arr);
     const max = Math.max(...arr);
@@ -679,4 +680,20 @@ function findDisappearedNumbers(arr: number[]): number[] {
   
   const result = findDisappearedNumbers([1, 3, 4, 7]);
   console.log(result); 
-  
+  */
+
+  /**TASK ZI
+
+Shundan function yozing, bu function 3 soniydan so'ng
+"Hello World!" so'zini qaytarsin.
+
+MASALAN: delayHelloWorld("Hello World"); return "Hello World"; */
+
+function delayHelloWorld(input: string) {
+    let word = setTimeout(() => {
+        console.log(input);
+      }, 3000);
+      return word;
+}
+
+console.log(delayHelloWorld("olma"));
