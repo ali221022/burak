@@ -689,6 +689,7 @@ Shundan function yozing, bu function 3 soniydan so'ng
 
 MASALAN: delayHelloWorld("Hello World"); return "Hello World"; */
 
+/*
 function delayHelloWorld(input: string) {
     let word = setTimeout(() => {
         console.log(input);
@@ -697,3 +698,25 @@ function delayHelloWorld(input: string) {
 }
 
 console.log(delayHelloWorld("olma"));
+*/
+
+/**
+ TASK ZJ:
+
+Shunday function yozing, u berilgan array ichidagi
+raqamlarni qiymatini hisoblab qaytarsin.
+
+MASALAN: reduceNestedArray([1, [1, 2, [4]]]); return 8;
+
+Yuqoridagi misolda, array nested bo'lgan holdatda ham,
+bizning function ularning yig'indisini hisoblab qaytarmoqda.
+ */
+
+
+    function reduceNestedArray(arr: any[]): number {
+        return arr.flat(Infinity).reduce((sum, num) => sum + (typeof num === "number" ? num : 0), 0);
+      }
+      
+      
+      console.log(reduceNestedArray([1, [1, 2, [4]]])); 
+    
